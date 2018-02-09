@@ -21,9 +21,14 @@ class LinkedListTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitWithSequence() {
+        let strings = ["Alpha", "Beta", "Gamma", "Delta"]
+        let list = LinkedList(sequence: strings)
+        for index in 0...list.count - 1 {
+            let node = list.nodeAt(index: index)
+            XCTAssertNotNil(node)
+            XCTAssertEqual(node?.value, strings[index])
+        }
     }
     
     func testPerformanceExample() {
