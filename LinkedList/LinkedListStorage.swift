@@ -52,6 +52,16 @@ final class LinkedListStorage<T: Equatable> {
         count += 1
     }
     
+    func copy() -> LinkedListStorage<T> {
+        let newList = LinkedListStorage<T>()
+        
+        for element in self {
+            newList.append(element.value)
+        }
+        
+        return newList
+    }
+    
     func nodeAt(index: Int) -> LinkedListNode<T>? {
         guard index >= 0, index < count else {
             return nil
