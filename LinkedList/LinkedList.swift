@@ -48,3 +48,11 @@ public struct LinkedList<T: Equatable> {
         mutableStorage.remove(index: index)
     }
 }
+
+// MARK: - Sequence
+
+extension LinkedList: Sequence {
+    public func makeIterator() -> LinkedListIterator<T> {
+        return storage.makeIterator()
+    }
+}

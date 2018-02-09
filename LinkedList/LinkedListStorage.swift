@@ -116,8 +116,8 @@ final class LinkedListStorage<T: Equatable> {
 
 // MARK: - LinkedListIterator
 
-struct LinkedListIterator<T: Equatable>: IteratorProtocol {
-    typealias Element = LinkedListNode<T>
+public struct LinkedListIterator<T: Equatable>: IteratorProtocol {
+    public typealias Element = LinkedListNode<T>
     
     /// The current node in the iteration
     private var currentNode: Element?
@@ -126,7 +126,7 @@ struct LinkedListIterator<T: Equatable>: IteratorProtocol {
         currentNode = startNode
     }
     
-    mutating func next() -> LinkedListIterator.Element? {
+    mutating public func next() -> LinkedListIterator.Element? {
         let node = currentNode
         currentNode = currentNode?.next
         return node
