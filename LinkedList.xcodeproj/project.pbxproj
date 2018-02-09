@@ -14,6 +14,9 @@
 		93F3D32F202E434400631E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F3D32D202E434400631E5A /* LaunchScreen.storyboard */; };
 		93F3D33A202E434400631E5A /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3D339202E434400631E5A /* LinkedListTests.swift */; };
 		93F3D345202E439500631E5A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 93F3D344202E439500631E5A /* README.md */; };
+		93F3D347202E445400631E5A /* LinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3D346202E445400631E5A /* LinkedListNode.swift */; };
+		93F3D349202E448E00631E5A /* LinkedListStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3D348202E448E00631E5A /* LinkedListStorage.swift */; };
+		93F3D34B202E458C00631E5A /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F3D34A202E458C00631E5A /* LinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		93F3D339202E434400631E5A /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
 		93F3D33B202E434400631E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93F3D344202E439500631E5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		93F3D346202E445400631E5A /* LinkedListNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListNode.swift; sourceTree = "<group>"; };
+		93F3D348202E448E00631E5A /* LinkedListStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListStorage.swift; sourceTree = "<group>"; };
+		93F3D34A202E458C00631E5A /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +87,14 @@
 			isa = PBXGroup;
 			children = (
 				93F3D324202E434400631E5A /* AppDelegate.swift */,
-				93F3D326202E434400631E5A /* ViewController.swift */,
-				93F3D328202E434400631E5A /* Main.storyboard */,
 				93F3D32B202E434400631E5A /* Assets.xcassets */,
-				93F3D32D202E434400631E5A /* LaunchScreen.storyboard */,
 				93F3D330202E434400631E5A /* Info.plist */,
+				93F3D32D202E434400631E5A /* LaunchScreen.storyboard */,
+				93F3D34A202E458C00631E5A /* LinkedList.swift */,
+				93F3D346202E445400631E5A /* LinkedListNode.swift */,
+				93F3D348202E448E00631E5A /* LinkedListStorage.swift */,
+				93F3D328202E434400631E5A /* Main.storyboard */,
+				93F3D326202E434400631E5A /* ViewController.swift */,
 			);
 			path = LinkedList;
 			sourceTree = "<group>";
@@ -203,7 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F3D347202E445400631E5A /* LinkedListNode.swift in Sources */,
 				93F3D327202E434400631E5A /* ViewController.swift in Sources */,
+				93F3D34B202E458C00631E5A /* LinkedList.swift in Sources */,
+				93F3D349202E448E00631E5A /* LinkedListStorage.swift in Sources */,
 				93F3D325202E434400631E5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
