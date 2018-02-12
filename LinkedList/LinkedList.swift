@@ -9,6 +9,9 @@
 import Foundation
 
 public struct LinkedList<T: Equatable> {
+    var start: LinkedListNode<T>? { return storage.start }
+    var end: LinkedListNode<T>? { return storage.end }
+
     private var storage: LinkedListStorage<T>
     private var mutableStorage: LinkedListStorage<T> {
         mutating get {

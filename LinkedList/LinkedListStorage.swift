@@ -12,7 +12,7 @@ final class LinkedListStorage<T: Equatable> {
     
     // MARK: - Private Properties
     
-    private var start: LinkedListNode<T>? {
+    private(set) var start: LinkedListNode<T>? {
         didSet {
             if end == nil {
                 end = start
@@ -20,7 +20,7 @@ final class LinkedListStorage<T: Equatable> {
         }
     }
     
-    private var end: LinkedListNode<T>? {
+    private(set) var end: LinkedListNode<T>? {
         didSet {
             if start == nil {
                 start = end
