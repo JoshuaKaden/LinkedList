@@ -88,4 +88,30 @@ class LinkedListTests: XCTestCase {
         }
     }
     
+    func testCanMakeCyclical() {
+        let strings = ["Alpha", "Beta", "Gamma", "Delta"]
+        let list = LinkedList(sequence: strings)
+        
+        XCTAssertFalse(list.isCyclical())
+        
+        let firstNode = list.start
+        let lastNode = list.end
+        
+        lastNode?.next = firstNode
+        firstNode?.previous = lastNode
+        
+        XCTAssertEqual(list.nodeAt(index: 0)?.previous?.value, list.nodeAt(index: 3)?.value)
+        XCTAssertEqual(list.nodeAt(index: 3)?.next?.value, list.nodeAt(index: 0)?.value)
+        
+        var counter = 0
+        var node = list.start
+        while counter < 1000 {
+            node = node?.next
+            XCTAssertNotNil(node)
+            counter += 1
+        }
+        XCTAssertEqual(counter, 1000)
+        
+        XCTAssertTrue(list.isCyclical())
+    }
 }

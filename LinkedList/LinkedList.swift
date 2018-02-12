@@ -59,3 +59,24 @@ extension LinkedList: Sequence {
         return storage.makeIterator()
     }
 }
+
+// MARK: - Cyclical
+
+extension LinkedList {
+    public func isCyclical() -> Bool {
+        var uniqueNodes: [LinkedListNode<T>] = []
+        
+        var node = start
+        while node?.next != nil {
+            if let next = node?.next {
+                if let _ = uniqueNodes.filter({ $0 === next }).first {
+                    return true
+                }
+                uniqueNodes.append(next)
+                node = next
+            }
+        }
+        
+        return false
+    }
+}
