@@ -114,4 +114,15 @@ class LinkedListTests: XCTestCase {
         
         XCTAssertTrue(list.isCyclical())
     }
+    
+    func testCopyOnWrite() {
+        let strings = ["Alpha", "Beta", "Gamma", "Delta"]
+        let list = LinkedList(sequence: strings)
+        
+        var list2 = list
+        XCTAssertTrue(list.nodeAt(index: 0) === list2.nodeAt(index: 0))
+        
+        list2.append("Epsilon")
+        XCTAssertFalse(list.nodeAt(index: 0) === list2.nodeAt(index: 0))
+    }
 }
